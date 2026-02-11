@@ -19,9 +19,9 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
         <div className="flex justify-between items-center h-full">
           {/* Logo */}
-          <div className="flex-shrink-0 cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
-            <span className="font-display font-bold text-xl text-primary tracking-tight">
-              DEV<span className="text-foreground">PORTFOLIO</span>
+          <div className="flex-shrink-0 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+            <span className="font-display font-bold text-xl text-primary tracking-tight" data-testid="text-logo">
+              Israr<span className="text-foreground"> Ahmed</span>
             </span>
           </div>
 
@@ -40,7 +40,7 @@ export function Navigation() {
               </Link>
             ))}
             <Link to="contact" smooth={true} duration={500} offset={-70}>
-              <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button size="sm" data-testid="button-hire-me">
                 Hire Me
               </Button>
             </Link>

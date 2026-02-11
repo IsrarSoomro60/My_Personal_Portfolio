@@ -40,35 +40,39 @@ export default function Home() {
             <div className="inline-block px-4 py-2 rounded-full bg-secondary text-primary font-medium text-sm mb-6 border border-primary/10">
               Backend & ML Engineer
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6">
-              Building robust <span className="text-primary">backend systems</span> and intelligent <span className="text-primary">ML solutions</span>.
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6" data-testid="text-hero-title">
+              Hi, I'm <span className="text-primary">Israr Ahmed</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg leading-relaxed">
-              I'm a Software Engineering student passionate about Python, Django, and scalable architecture. 
-              I transform complex problems into clean, efficient code.
+            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg leading-relaxed" data-testid="text-hero-subtitle">
+              A Software Engineering student building robust backend systems and intelligent ML solutions. 
+              I transform complex problems into clean, efficient code with Python, Django, and data-driven approaches.
             </p>
             
             <div className="flex flex-wrap gap-4 mb-12">
               <Link to="projects" smooth={true} duration={500} offset={-70}>
-                <Button size="lg" className="h-12 px-8 text-base bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg shadow-primary/20 hover:shadow-primary/30 hover:-translate-y-1 transition-all">
+                <Button size="lg" data-testid="button-view-projects">
                   View Projects
                 </Button>
               </Link>
-              <Button variant="outline" size="lg" className="h-12 px-8 text-base border-2 hover:bg-secondary/50">
-                <Download className="mr-2 h-4 w-4" /> Download Resume
-              </Button>
+              <a href="/Israr_Ahmed_Resume.pdf" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="lg" data-testid="button-download-resume">
+                  <Download className="mr-2 h-4 w-4" /> Download Resume
+                </Button>
+              </a>
             </div>
 
             <div className="flex items-center gap-6 text-muted-foreground">
-              <a href="#" className="hover:text-primary transition-colors transform hover:scale-110 duration-200">
+              <a href="https://github.com/israr-ahmed" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" data-testid="link-github">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-primary transition-colors transform hover:scale-110 duration-200">
+              <a href="https://linkedin.com/in/israr-ahmed" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" data-testid="link-linkedin">
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="#" className="hover:text-primary transition-colors transform hover:scale-110 duration-200">
-                <Mail className="w-6 h-6" />
-              </a>
+              <Link to="contact" smooth={true} duration={500} offset={-70}>
+                <span className="hover:text-primary transition-colors cursor-pointer" data-testid="link-mail">
+                  <Mail className="w-6 h-6" />
+                </span>
+              </Link>
             </div>
           </motion.div>
 
@@ -174,7 +178,7 @@ export default function Home() {
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {projects?.map((project, index) => (
                 <ProjectCard key={project.id} project={project} index={index} />
               ))}
@@ -247,7 +251,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <a href="mailto:hello@example.com" className="font-medium hover:text-primary transition-colors">hello@example.com</a>
+                    <a href="mailto:israr.ahmed@example.com" className="font-medium hover:text-primary transition-colors" data-testid="link-email">israr.ahmed@example.com</a>
                   </div>
                 </div>
                 
@@ -257,7 +261,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">LinkedIn</p>
-                    <a href="#" className="font-medium hover:text-primary transition-colors">linkedin.com/in/student</a>
+                    <a href="https://linkedin.com/in/israr-ahmed" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-primary transition-colors" data-testid="link-contact-linkedin">linkedin.com/in/israr-ahmed</a>
                   </div>
                 </div>
 
@@ -267,7 +271,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">GitHub</p>
-                    <a href="#" className="font-medium hover:text-primary transition-colors">github.com/student</a>
+                    <a href="https://github.com/israr-ahmed" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-primary transition-colors" data-testid="link-contact-github">github.com/israr-ahmed</a>
                   </div>
                 </div>
               </div>
@@ -281,12 +285,12 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-8 bg-card border-t border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Software Engineering Portfolio. Built with React & Django.
+          <p className="text-sm text-muted-foreground" data-testid="text-footer-copyright">
+            © {new Date().getFullYear()} Israr Ahmed. Built with React & Django.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Privacy</a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Terms</a>
+            <a href="https://github.com/israr-ahmed" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-github">GitHub</a>
+            <a href="https://linkedin.com/in/israr-ahmed" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-linkedin">LinkedIn</a>
           </div>
         </div>
       </footer>

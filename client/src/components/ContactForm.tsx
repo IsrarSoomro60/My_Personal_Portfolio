@@ -58,7 +58,7 @@ export function ContactForm() {
                 <FormItem>
                   <FormLabel>Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="John Doe" {...field} className="h-12 bg-background" />
+                    <Input placeholder="John Doe" {...field} className="bg-background" data-testid="input-name" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -71,7 +71,7 @@ export function ContactForm() {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="john@example.com" {...field} className="h-12 bg-background" />
+                    <Input placeholder="john@example.com" {...field} className="bg-background" data-testid="input-email" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -87,7 +87,8 @@ export function ContactForm() {
                 <FormControl>
                   <Textarea 
                     placeholder="Tell me about your project or opportunity..." 
-                    className="min-h-[150px] bg-background resize-none p-4"
+                    className="min-h-[150px] bg-background resize-none"
+                    data-testid="input-message"
                     {...field} 
                   />
                 </FormControl>
@@ -97,8 +98,10 @@ export function ContactForm() {
           />
           <Button 
             type="submit" 
-            className="w-full h-12 text-base font-semibold bg-primary hover:bg-primary/90 text-primary-foreground transition-all"
+            className="w-full text-base font-semibold"
+            size="lg"
             disabled={mutation.isPending}
+            data-testid="button-submit-contact"
           >
             {mutation.isPending ? (
               <>

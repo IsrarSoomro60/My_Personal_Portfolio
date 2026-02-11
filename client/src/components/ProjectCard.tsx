@@ -50,7 +50,7 @@ export function ProjectCard({ project, index }: { project: ProjectResponse; inde
           <div className="flex items-center gap-3 pt-4 border-t border-border/50">
             {project.projectUrl && (
               <a href={project.projectUrl} target="_blank" rel="noopener noreferrer">
-                <Button variant="default" size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground gap-2">
+                <Button variant="default" size="sm" className="gap-2" data-testid={`button-demo-${project.id}`}>
                   Live Demo <ExternalLink className="w-3.5 h-3.5" />
                 </Button>
               </a>
@@ -58,7 +58,7 @@ export function ProjectCard({ project, index }: { project: ProjectResponse; inde
             
             {project.repoUrl ? (
               <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" size="sm" className="gap-2">
+                <Button variant="outline" size="sm" className="gap-2" data-testid={`button-code-${project.id}`}>
                   Code <Github className="w-3.5 h-3.5" />
                 </Button>
               </a>
