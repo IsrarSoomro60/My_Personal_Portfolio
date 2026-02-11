@@ -6,6 +6,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { useProjects, useSkills } from "@/hooks/use-portfolio";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Download, Code2, Server, Database, Brain } from "lucide-react";
+import profilePhoto from "@assets/Gemini_Generated_Image_9uoa5o9uoa5o9uoa_(1)_1770811209942.jpg";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-scroll";
 
@@ -87,8 +88,8 @@ export default function Home() {
               <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-white shadow-2xl">
                 {/* Placeholder for professional headshot */}
                 <img 
-                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&h=800&fit=crop" 
-                  alt="Profile"
+                  src={profilePhoto}
+                  alt="Israr Ahmed"
                   className="w-full h-full object-cover"
                 />
               </div>
