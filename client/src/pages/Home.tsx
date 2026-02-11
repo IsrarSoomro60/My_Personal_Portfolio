@@ -26,12 +26,12 @@ export default function Home() {
       <Navigation />
 
       {/* Hero Section */}
-      <section id="about" className="relative min-h-screen flex items-center pt-16 overflow-hidden">
+      <section id="about" className="relative min-h-screen flex items-center pt-16">
         {/* Abstract Background Element */}
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-3xl" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -85,7 +85,7 @@ export default function Home() {
           >
             <div className="relative">
               <div className="absolute inset-0 bg-primary rounded-full blur-3xl opacity-10 animate-pulse" />
-              <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+              <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-white dark:border-gray-700 shadow-2xl">
                 {/* Placeholder for professional headshot */}
                 <img 
                   src={profilePhoto}
@@ -94,34 +94,36 @@ export default function Home() {
                 />
               </div>
               
-              {/* Floating Cards */}
-              <motion.div 
-                animate={{ y: [0, -10, 0] }}
-                transition={{ repeat: Infinity, duration: 4 }}
-                className="absolute -left-4 top-20 bg-white p-4 rounded-xl shadow-lg border border-border hidden md:flex items-center gap-3"
-              >
-                <div className="bg-blue-100 p-2 rounded-lg text-blue-600">
-                  <Code2 className="w-6 h-6" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground font-medium">Specialized in</p>
-                  <p className="font-bold text-sm">Python & Django</p>
-                </div>
-              </motion.div>
+              {/* Floating Cards - positioned fully below the photo */}
+              <div className="hidden md:flex justify-center gap-4 mt-6">
+                <motion.div 
+                  animate={{ y: [0, -6, 0] }}
+                  transition={{ repeat: Infinity, duration: 4 }}
+                  className="bg-card p-4 rounded-xl shadow-lg border border-border flex items-center gap-3"
+                >
+                  <div className="bg-blue-100 dark:bg-blue-900/40 p-2 rounded-lg text-blue-600 dark:text-blue-400">
+                    <Code2 className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-muted-foreground font-medium">Specialized in</p>
+                    <p className="font-bold text-sm text-foreground">Python & Django</p>
+                  </div>
+                </motion.div>
 
-              <motion.div 
-                animate={{ y: [0, 10, 0] }}
-                transition={{ repeat: Infinity, duration: 5, delay: 1 }}
-                className="absolute -right-8 bottom-20 bg-white p-4 rounded-xl shadow-lg border border-border hidden md:flex items-center gap-3"
-              >
-                <div className="bg-purple-100 p-2 rounded-lg text-purple-600">
-                  <Brain className="w-6 h-6" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground font-medium">Passion for</p>
-                  <p className="font-bold text-sm">Machine Learning</p>
-                </div>
-              </motion.div>
+                <motion.div 
+                  animate={{ y: [0, 6, 0] }}
+                  transition={{ repeat: Infinity, duration: 5, delay: 1 }}
+                  className="bg-card p-4 rounded-xl shadow-lg border border-border flex items-center gap-3"
+                >
+                  <div className="bg-purple-100 dark:bg-purple-900/40 p-2 rounded-lg text-purple-600 dark:text-purple-400">
+                    <Brain className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-muted-foreground font-medium">Passion for</p>
+                    <p className="font-bold text-sm text-foreground">Machine Learning</p>
+                  </div>
+                </motion.div>
+              </div>
             </div>
           </motion.div>
         </div>
