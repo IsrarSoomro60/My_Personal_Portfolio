@@ -63,10 +63,10 @@ export default function Home() {
             </div>
 
             <div className="flex items-center gap-6 text-muted-foreground">
-              <a href="https://github.com/israr-ahmed" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" data-testid="link-github">
+              <a href="https://github.com/israrsoomro60" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" data-testid="link-github">
                 <Github className="w-6 h-6" />
               </a>
-              <a href="https://linkedin.com/in/israr-ahmed" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" data-testid="link-linkedin">
+              <a href="https://linkedin.com/in/israrahmedsoomro" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" data-testid="link-linkedin">
                 <Linkedin className="w-6 h-6" />
               </a>
               <Link to="contact" smooth={true} duration={500} offset={-70}>
@@ -254,7 +254,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <a href="mailto:israr.ahmed@example.com" className="font-medium hover:text-primary transition-colors" data-testid="link-email">israr.ahmed@example.com</a>
+                    <a href="mailto:israr.ahmed.se27@gmail.com" className="font-medium hover:text-primary transition-colors" data-testid="link-email">israr.ahmed.se27@gmail.com</a>
                   </div>
                 </div>
                 
@@ -264,7 +264,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">LinkedIn</p>
-                    <a href="https://linkedin.com/in/israr-ahmed" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-primary transition-colors" data-testid="link-contact-linkedin">linkedin.com/in/israr-ahmed</a>
+                    <a href="https://linkedin.com/in/israrahmedsoomro" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-primary transition-colors" data-testid="link-contact-linkedin">linkedin.com/in/israrahmedsoomro</a>
                   </div>
                 </div>
 
@@ -274,7 +274,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">GitHub</p>
-                    <a href="https://github.com/israr-ahmed" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-primary transition-colors" data-testid="link-contact-github">github.com/israr-ahmed</a>
+                    <a href="https://github.com/israrsoomro60" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-primary transition-colors" data-testid="link-contact-github">github.com/israrsoomro60</a>
                   </div>
                 </div>
               </div>
@@ -292,8 +292,8 @@ export default function Home() {
             © {new Date().getFullYear()} Israr Ahmed. Built with React & Django.
           </p>
           <div className="flex gap-6">
-            <a href="https://github.com/israr-ahmed" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-github">GitHub</a>
-            <a href="https://linkedin.com/in/israr-ahmed" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-linkedin">LinkedIn</a>
+            <a href="https://github.com/israrsoomro60" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-github">GitHub</a>
+            <a href="https://linkedin.com/in/israrahmedsoomro" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-linkedin">LinkedIn</a>
           </div>
         </div>
       </footer>
